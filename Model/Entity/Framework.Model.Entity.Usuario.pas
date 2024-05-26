@@ -6,6 +6,8 @@ uses
   System.SysUtils,
   System.StrUtils,
   System.Variants,
+  System.JSON,
+  REST.Json,
 
   SimpleAttributes;
 
@@ -58,6 +60,10 @@ type
 
     [Ignore, Display('Usuário')]
     function Name : String;
+    [Ignore]
+    function ToJsonString : String;
+    [Ignore]
+    function ToJsonObject : TJSONObject;
   end;
 
 implementation
@@ -139,6 +145,16 @@ end;
 procedure TUsuario.SetUserName(const Value: String);
 begin
   FUserName := Value.Trim;
+end;
+
+function TUsuario.ToJsonObject: TJSONObject;
+begin
+  Result := TJson.ObjectToJsonObject(Self);
+end;
+
+function TUsuario.ToJsonString: String;
+begin
+  Result := TJson.ObjectToJsonString(Self);
 end;
 
 end.
