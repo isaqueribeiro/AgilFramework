@@ -1,0 +1,23 @@
+object ViewIndex: TViewIndex
+  Left = 0
+  Top = 0
+  BorderStyle = None
+  Caption = 'Plataforma Chevrolet'
+  ClientHeight = 482
+  ClientWidth = 780
+  Fill.Kind = Solid
+  Position = ScreenCenter
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnKeyDown = FormKeyDown
+  DesignerMasterStyle = 0
+  object Layout: TLayout
+    Align = Client
+    Size.Width = 780.000000000000000000
+    Size.Height = 482.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+  end
+end

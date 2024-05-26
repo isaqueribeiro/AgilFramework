@@ -1,0 +1,905 @@
+object ViewLogin: TViewLogin
+  Left = 0
+  Top = 0
+  Caption = 'Framework '#193'gil'
+  ClientHeight = 482
+  ClientWidth = 780
+  StyleBook = DataModuleResource.StyleBookDefault
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object RectangleBackground: TRectangle
+    Align = Contents
+    Fill.Color = claWhite
+    Locked = True
+    Size.Width = 780.000000000000000000
+    Size.Height = 482.000000000000000000
+    Size.PlatformDefault = False
+    Stroke.Kind = None
+  end
+  object Layout: TLayout
+    Align = Client
+    Size.Width = 780.000000000000000000
+    Size.Height = 482.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object LayoutOnBoard: TLayout
+      Align = Scale
+      Size.Width = 391.842315673828100000
+      Size.Height = 481.999969482421900000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      TabStop = False
+      object Image1: TImage
+        MultiResBitmap = <
+          item
+          end>
+        Align = Contents
+        MarginWrapMode = Center
+        Size.Width = 391.842315673828100000
+        Size.Height = 481.999969482421900000
+        Size.PlatformDefault = False
+        WrapMode = Center
+      end
+    end
+    object LayoutUser: TLayout
+      Align = Scale
+      Position.X = 391.842315673828100000
+      Size.Width = 391.842315673828100000
+      Size.Height = 481.999969482421900000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      TabStop = False
+      object TabControlLogin: TTabControl
+        Align = Client
+        Size.Width = 391.842315673828100000
+        Size.Height = 481.999969482421900000
+        Size.PlatformDefault = False
+        StyleLookup = 'TabControlTransparent'
+        TabIndex = 0
+        TabOrder = 0
+        TabStop = False
+        TabPosition = None
+        OnChange = TabControlLoginChange
+        Sizes = (
+          391.842315673828s
+          481.999969482422s
+          391.842315673828s
+          481.999969482422s
+          391.842315673828s
+          481.999969482422s)
+        object tbiLogin: TTabItem
+          CustomIcon = <
+            item
+            end>
+          TextSettings.Trimming = None
+          IsSelected = True
+          Size.Width = 8.000000000000000000
+          Size.Height = 8.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = ''
+          TabOrder = 0
+          TabStop = False
+          Text = 'tbiLogin'
+          ExplicitSize.cx = 8.000000000000000000
+          ExplicitSize.cy = 8.000000000000000000
+          object lytLoginContent: TLayout
+            Align = Client
+            Size.Width = 391.842315673828100000
+            Size.Height = 481.999969482421900000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            object lytLoginHeader: TLayout
+              Align = MostTop
+              Size.Width = 391.842315673828100000
+              Size.Height = 120.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 3
+              TabStop = False
+              object lblLoginHeader: TLabel
+                Align = Center
+                StyledSettings = [Family, Style, FontColor]
+                Size.Width = 163.000000000000000000
+                Size.Height = 37.000000000000000000
+                Size.PlatformDefault = False
+                StyleLookup = 'LabelHeader'
+                TextSettings.Font.Size = 32.000000000000000000
+                TextSettings.HorzAlign = Center
+                Text = 'LOGIN'
+                TabOrder = 0
+                TabStop = False
+              end
+            end
+            object lytLoginBody: TLayout
+              Align = Client
+              Size.Width = 391.842315673828100000
+              Size.Height = 191.999969482421900000
+              Size.PlatformDefault = False
+              TabOrder = 2
+              object lytLoginFields: TLayout
+                Align = Client
+                Size.Width = 391.842315673828100000
+                Size.Height = 191.999969482421900000
+                Size.PlatformDefault = False
+                TabOrder = 0
+                object fillColorLogin: TFillRGBEffect
+                  Color = xFF2AB1AB
+                end
+                object edtLoginPassword: TEdit
+                  Touch.InteractiveGestures = [LongTap, DoubleTap]
+                  StyleLookup = 'transparentedit'
+                  TabOrder = 1
+                  Password = True
+                  TextSettings.FontColor = xFF2AB1AB
+                  Position.X = 48.000000000000000000
+                  Position.Y = 112.000000000000000000
+                  Size.Width = 289.000000000000000000
+                  Size.Height = 32.000000000000000000
+                  Size.PlatformDefault = False
+                  TextPrompt = 'Entre com sua senha'
+                  StyledSettings = [Family, Size]
+                  object linLoginPassword: TLine
+                    Align = Bottom
+                    LineType = Top
+                    Opacity = 0.500000000000000000
+                    Position.Y = 30.000000000000000000
+                    Size.Width = 289.000000000000000000
+                    Size.Height = 2.000000000000000000
+                    Size.PlatformDefault = False
+                    Stroke.Color = xFF2AB1AB
+                  end
+                  object lblLoginPassword: TLabel
+                    Align = Top
+                    StyledSettings = [Family, Size]
+                    Margins.Top = -24.000000000000000000
+                    Position.Y = -24.000000000000000000
+                    Size.Width = 289.000000000000000000
+                    Size.Height = 24.000000000000000000
+                    Size.PlatformDefault = False
+                    TextSettings.FontColor = xFF2AB1AB
+                    TextSettings.VertAlign = Trailing
+                    Text = 'Password'
+                    TabOrder = 1
+                    TabStop = False
+                  end
+                  object imgLoginPassword: TImage
+                    MultiResBitmap.Height = 32
+                    MultiResBitmap.Width = 32
+                    MultiResBitmap = <
+                      item
+                        Width = 32
+                        Height = 32
+                        PNG = {
+                          89504E470D0A1A0A0000000D4948445200000020000000200806000000737A7A
+                          F40000000473424954080808087C086488000000F6494441545885C5964B0EC2
+                          300C44A77CD61C818B701676704D0E81046BE01E2D1B52A5414EC7AEDD8CE455
+                          9DBC89E32405FC7401300821AA7300F78A79FEF2360BE183029EF20F0B9993C9
+                          AC319AB06E41755F4975806D0BF664DEF30749516A80F0614EECEA45689EB3B4
+                          0925BDC93CF5561EC1379A04A4EF087602D6C0636D03295E4AA355DD8D26C488
+                          3C0594A24E01ABABB602AEAB87F21EF086AB6E426FF8C8660C84C11903A170A0
+                          7E0ABCE1DB125E336081A767F704E003E086E973DC4B83BCE026950357859783
+                          B5708F3FEAB10722BA9D52A784BBAC3A57EBC7A8BD811D91E35EF65C4C05CE91
+                          0698266C5A815038007C01106B7B5D4E3D397E0000000049454E44AE426082}
+                        FileName = 'P:\Docs\Projetos\Agil\Framework\View\Assets\Image\key.png'
+                      end>
+                    Align = Right
+                    Locked = True
+                    Margins.Top = 2.000000000000000000
+                    Margins.Bottom = 2.000000000000000000
+                    Position.X = 265.000000000000000000
+                    Position.Y = 2.000000000000000000
+                    Size.Width = 24.000000000000000000
+                    Size.Height = 26.000000000000000000
+                    Size.PlatformDefault = False
+                  end
+                end
+                object edtLoginUserName: TEdit
+                  Touch.InteractiveGestures = [LongTap, DoubleTap]
+                  StyleLookup = 'transparentedit'
+                  TabOrder = 0
+                  KeyboardType = EmailAddress
+                  TextSettings.FontColor = xFF2AB1AB
+                  Position.X = 48.000000000000000000
+                  Position.Y = 56.000000000000000000
+                  Size.Width = 289.000000000000000000
+                  Size.Height = 32.000000000000000000
+                  Size.PlatformDefault = False
+                  TextPrompt = 'Entre com seu e-mail'
+                  StyledSettings = [Family, Size]
+                  object linLoginUserName: TLine
+                    Align = Bottom
+                    LineType = Top
+                    Opacity = 0.500000000000000000
+                    Position.Y = 30.000000000000000000
+                    Size.Width = 289.000000000000000000
+                    Size.Height = 2.000000000000000000
+                    Size.PlatformDefault = False
+                    Stroke.Color = xFF2AB1AB
+                  end
+                  object lblLoginUserName: TLabel
+                    Align = Top
+                    StyledSettings = [Family, Size]
+                    FocusControl = edtLoginUserName
+                    Margins.Top = -24.000000000000000000
+                    Position.Y = -24.000000000000000000
+                    Size.Width = 289.000000000000000000
+                    Size.Height = 24.000000000000000000
+                    Size.PlatformDefault = False
+                    TextSettings.FontColor = xFF2AB1AB
+                    TextSettings.VertAlign = Trailing
+                    Text = 'Username'
+                    TabOrder = 1
+                    TabStop = False
+                  end
+                  object imgLoginUserName: TImage
+                    MultiResBitmap.Height = 32
+                    MultiResBitmap.Width = 32
+                    MultiResBitmap = <
+                      item
+                        Width = 32
+                        Height = 32
+                        PNG = {
+                          89504E470D0A1A0A0000000D4948445200000020000000200806000000737A7A
+                          F40000000473424954080808087C086488000001C8494441545885BDD63F8F4C
+                          511CC6F1CF3513C952D09088644742A3D8928495ACD84E10745A85625F80A844
+                          A8C9C67BA0201A4BA1DB8D86ED448345B196C4560AABD89DD9AB9873933166E7
+                          FE3977E6499EE6DEF93DDFE7CE99B9E7505EE7F0086BD80E5EC3E3706F643A80
+                          05A4397E818375C30FE3530178E69530538B9A7853029EF96D988DD65C0578E6
+                          B93A0A7C8828F031167E34029EF9D830C0AE9C02C7AB772F969157604F0D0586
+                          660C2FD0B41E8D6F367FC68CEFC3A6EAEBBF85FD3105E07944818558389C40A7
+                          02BC8393751480BB150ADCAB0B0E091E9480CF8799DA75059F8780BFE06A99C0
+                          2A2D1B98C159B4C2B5552C06772A640E548269DCC76B3CC39102732D3C91244B
+                          61F68C0A0F7A0ACBFEFF8AFFE0A1EE3FA3D1F3F946B8368F8D0173CB21B3906E
+                          A13D2064509995E041D07EB771330F7EA74050AC6FEF04BFA47BC01C7581EDC0
+                          FA4713F8360678E6EFFA76C98B6384673EDF5B602FBE8E11FE1EBBFB97E1B4B8
+                          ADB7A87F63AA1F9EE9BAD1FE10B770792778A61B8ABD07CA7A13D7F2E0992EE0
+                          578DF075CC1685676AE1650DF0A7385416DEAB59BC52EE54D4D63DCA4DE78597
+                          D9A52675DF603398922493D274A29B926C48D355BCC35280FF2812FA1717C8E2
+                          B84EB319710000000049454E44AE426082}
+                        FileName = 
+                          'P:\Docs\Projetos\Agil\Framework\View\Assets\Image\32\user-32x32.' +
+                          'png'
+                      end>
+                    Align = Right
+                    Locked = True
+                    Margins.Top = 2.000000000000000000
+                    Margins.Bottom = 2.000000000000000000
+                    Position.X = 265.000000000000000000
+                    Position.Y = 2.000000000000000000
+                    Size.Width = 24.000000000000000000
+                    Size.Height = 26.000000000000000000
+                    Size.PlatformDefault = False
+                  end
+                end
+              end
+            end
+            object lytLoginFooter: TLayout
+              Align = MostBottom
+              Position.Y = 361.999969482421900000
+              Size.Width = 391.842315673828100000
+              Size.Height = 120.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 1
+              TabStop = False
+              object Layout1: TLayout
+                Align = Top
+                Size.Width = 391.842315673828100000
+                Size.Height = 50.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 0
+                object lblEsqueciSenha: TLabel
+                  Align = Scale
+                  Cursor = crHandPoint
+                  StyledSettings = []
+                  HitTest = True
+                  Opacity = 0.800000011920929000
+                  Position.X = 12.000000953674320000
+                  Position.Y = 6.000000000000000000
+                  Size.Width = 177.599975585937500000
+                  Size.Height = 40.000000000000000000
+                  Size.PlatformDefault = False
+                  TextSettings.Font.StyleExt = {00060000000000000004000000}
+                  TextSettings.FontColor = xFF2AB1AB
+                  TextSettings.HorzAlign = Center
+                  Text = 'Esqueci minha senha!'
+                  TabOrder = 1
+                  OnClick = lblEsqueciSenhaClick
+                end
+                object lblRegistrarAcesso: TLabel
+                  Align = Scale
+                  Cursor = crHandPoint
+                  StyledSettings = []
+                  HitTest = True
+                  Opacity = 0.800000011920929000
+                  Position.X = 204.000015258789100000
+                  Position.Y = 6.000000000000000000
+                  Size.Width = 177.599960327148400000
+                  Size.Height = 40.000000000000000000
+                  Size.PlatformDefault = False
+                  TextSettings.Font.StyleExt = {00060000000000000004000000}
+                  TextSettings.FontColor = xFF21A09A
+                  TextSettings.HorzAlign = Center
+                  Text = 'Registrar aceso'
+                  TabOrder = 0
+                  OnClick = lblRegistrarAcessoClick
+                end
+                object Line3: TLine
+                  Align = Center
+                  LineType = Right
+                  Opacity = 0.800000011920929000
+                  Margins.Top = 8.000000000000000000
+                  Margins.Bottom = 8.000000000000000000
+                  Size.Width = 4.000000000000000000
+                  Size.Height = 34.000000000000000000
+                  Size.PlatformDefault = False
+                  Stroke.Color = xFF21A09A
+                end
+              end
+            end
+            object lytLoginButton: TLayout
+              Align = Bottom
+              Position.Y = 311.999969482421900000
+              Size.Width = 391.842315673828100000
+              Size.Height = 50.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 0
+              object recLoginButton: TRoundRect
+                Align = Center
+                Fill.Color = xFF2AB1AB
+                Opacity = 0.800000011920929000
+                Size.Width = 217.000000000000000000
+                Size.Height = 46.000000000000000000
+                Size.PlatformDefault = False
+                Stroke.Kind = None
+                OnClick = recLoginButtonClick
+                object lblLoginButton: TLabel
+                  Align = Client
+                  StyledSettings = []
+                  Locked = True
+                  Size.Width = 217.000000000000000000
+                  Size.Height = 46.000000000000000000
+                  Size.PlatformDefault = False
+                  TextSettings.Font.Size = 16.000000000000000000
+                  TextSettings.Font.StyleExt = {00060000000000000004000000}
+                  TextSettings.FontColor = claWhite
+                  TextSettings.HorzAlign = Center
+                  Text = 'Login'
+                  TabOrder = 0
+                end
+              end
+            end
+          end
+        end
+        object tbiRegister: TTabItem
+          CustomIcon = <
+            item
+            end>
+          TextSettings.Trimming = None
+          IsSelected = False
+          Size.Width = 8.000000000000000000
+          Size.Height = 8.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = ''
+          TabOrder = 0
+          TabStop = False
+          Text = 'tbiRegister'
+          ExplicitSize.cx = 8.000000000000000000
+          ExplicitSize.cy = 8.000000000000000000
+          object lytRegisterContenet: TLayout
+            Align = Client
+            Size.Width = 391.842315673828100000
+            Size.Height = 481.999969482421900000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            object lytRegisterHeader: TLayout
+              Align = MostTop
+              Size.Width = 391.842315673828100000
+              Size.Height = 120.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 3
+              TabStop = False
+              object lblRegisterHeader: TLabel
+                Align = Center
+                StyledSettings = [Family, Style, FontColor]
+                Size.Width = 163.000000000000000000
+                Size.Height = 37.000000000000000000
+                Size.PlatformDefault = False
+                StyleLookup = 'LabelHeader'
+                TextSettings.Font.Size = 32.000000000000000000
+                TextSettings.HorzAlign = Center
+                Text = 'REGISTER'
+                TabOrder = 0
+                TabStop = False
+              end
+            end
+            object lytRegisterBody: TLayout
+              Align = Client
+              Size.Width = 391.842315673828100000
+              Size.Height = 251.999969482421900000
+              Size.PlatformDefault = False
+              TabOrder = 2
+              object lytRegisterFields: TLayout
+                Align = Client
+                Size.Width = 391.842315673828100000
+                Size.Height = 251.999969482421900000
+                Size.PlatformDefault = False
+                TabOrder = 0
+                object fillRegisterFields: TFillRGBEffect
+                  Color = xFF2AB1AB
+                end
+                object edtRegisterPassword: TEdit
+                  Touch.InteractiveGestures = [LongTap, DoubleTap]
+                  StyleLookup = 'transparentedit'
+                  TabOrder = 2
+                  Password = True
+                  TextSettings.FontColor = xFF2AB1AB
+                  Position.X = 48.000000000000000000
+                  Position.Y = 168.000000000000000000
+                  Size.Width = 289.000000000000000000
+                  Size.Height = 32.000000000000000000
+                  Size.PlatformDefault = False
+                  TextPrompt = 'Informe sua senha'
+                  StyledSettings = [Family, Size]
+                  object linRegisterPassword: TLine
+                    Align = Bottom
+                    LineType = Top
+                    Opacity = 0.500000000000000000
+                    Position.Y = 30.000000000000000000
+                    Size.Width = 289.000000000000000000
+                    Size.Height = 2.000000000000000000
+                    Size.PlatformDefault = False
+                    Stroke.Color = xFF2AB1AB
+                  end
+                  object lblRegisterPassword: TLabel
+                    Align = Top
+                    StyledSettings = [Family, Size]
+                    Margins.Top = -24.000000000000000000
+                    Position.Y = -24.000000000000000000
+                    Size.Width = 289.000000000000000000
+                    Size.Height = 24.000000000000000000
+                    Size.PlatformDefault = False
+                    TextSettings.FontColor = xFF2AB1AB
+                    TextSettings.VertAlign = Trailing
+                    Text = 'Password'
+                    TabOrder = 1
+                    TabStop = False
+                  end
+                  object imgRegisterPassword: TImage
+                    MultiResBitmap.Height = 32
+                    MultiResBitmap.Width = 32
+                    MultiResBitmap = <
+                      item
+                        Width = 32
+                        Height = 32
+                        PNG = {
+                          89504E470D0A1A0A0000000D4948445200000020000000200806000000737A7A
+                          F40000000473424954080808087C086488000000F6494441545885C5964B0EC2
+                          300C44A77CD61C818B701676704D0E81046BE01E2D1B52A5414EC7AEDD8CE455
+                          9DBC89E32405FC7401300821AA7300F78A79FEF2360BE183029EF20F0B9993C9
+                          AC319AB06E41755F4975806D0BF664DEF30749516A80F0614EECEA45689EB3B4
+                          0925BDC93CF5561EC1379A04A4EF087602D6C0636D03295E4AA355DD8D26C488
+                          3C0594A24E01ABABB602AEAB87F21EF086AB6E426FF8C8660C84C11903A170A0
+                          7E0ABCE1DB125E336081A767F704E003E086E973DC4B83BCE026950357859783
+                          B5708F3FEAB10722BA9D52A784BBAC3A57EBC7A8BD811D91E35EF65C4C05CE91
+                          0698266C5A815038007C01106B7B5D4E3D397E0000000049454E44AE426082}
+                        FileName = 'P:\Docs\Projetos\Agil\Framework\View\Assets\Image\key.png'
+                      end>
+                    Align = Right
+                    Locked = True
+                    Margins.Top = 2.000000000000000000
+                    Margins.Bottom = 2.000000000000000000
+                    Position.X = 265.000000000000000000
+                    Position.Y = 2.000000000000000000
+                    Size.Width = 24.000000000000000000
+                    Size.Height = 26.000000000000000000
+                    Size.PlatformDefault = False
+                  end
+                end
+                object edtRegisterEmail: TEdit
+                  Touch.InteractiveGestures = [LongTap, DoubleTap]
+                  StyleLookup = 'transparentedit'
+                  TabOrder = 1
+                  KeyboardType = EmailAddress
+                  TextSettings.FontColor = xFF2AB1AB
+                  Position.X = 48.000000000000000000
+                  Position.Y = 112.000000000000000000
+                  Size.Width = 289.000000000000000000
+                  Size.Height = 32.000000000000000000
+                  Size.PlatformDefault = False
+                  TextPrompt = 'Informe seu e-mail'
+                  StyledSettings = [Family, Size]
+                  object linRegisterEmail: TLine
+                    Align = Bottom
+                    LineType = Top
+                    Opacity = 0.500000000000000000
+                    Position.Y = 30.000000000000000000
+                    Size.Width = 289.000000000000000000
+                    Size.Height = 2.000000000000000000
+                    Size.PlatformDefault = False
+                    Stroke.Color = xFF2AB1AB
+                  end
+                  object lblRegisterEmail: TLabel
+                    Align = Top
+                    StyledSettings = [Family, Size]
+                    FocusControl = edtRegisterEmail
+                    Margins.Top = -24.000000000000000000
+                    Position.Y = -24.000000000000000000
+                    Size.Width = 289.000000000000000000
+                    Size.Height = 24.000000000000000000
+                    Size.PlatformDefault = False
+                    TextSettings.FontColor = xFF2AB1AB
+                    TextSettings.VertAlign = Trailing
+                    Text = 'E-mail'
+                    TabOrder = 1
+                    TabStop = False
+                  end
+                  object imgRegisterEmail: TImage
+                    MultiResBitmap.Height = 32
+                    MultiResBitmap.Width = 32
+                    MultiResBitmap = <
+                      item
+                        Width = 32
+                        Height = 32
+                        PNG = {
+                          89504E470D0A1A0A0000000D4948445200000020000000200806000000737A7A
+                          F40000000473424954080808087C086488000001C8494441545885BDD63F8F4C
+                          511CC6F1CF3513C952D09088644742A3D8928495ACD84E10745A85625F80A844
+                          A8C9C67BA0201A4BA1DB8D86ED448345B196C4560AABD89DD9AB9873933166E7
+                          FE3977E6499EE6DEF93DDFE7CE99B9E7505EE7F0086BD80E5EC3E3706F643A80
+                          05A4397E818375C30FE3530178E69530538B9A7853029EF96D988DD65C0578E6
+                          B93A0A7C8828F031167E34029EF9D830C0AE9C02C7AB772F969157604F0D0586
+                          660C2FD0B41E8D6F367FC68CEFC3A6EAEBBF85FD3105E07944818558389C40A7
+                          02BC8393751480BB150ADCAB0B0E091E9480CF8799DA75059F8780BFE06A99C0
+                          2A2D1B98C159B4C2B5552C06772A640E548269DCC76B3CC39102732D3C91244B
+                          61F68C0A0F7A0ACBFEFF8AFFE0A1EE3FA3D1F3F946B8368F8D0173CB21B3906E
+                          A13D2064509995E041D07EB771330F7EA74050AC6FEF04BFA47BC01C7581EDC0
+                          FA4713F8360678E6EFFA76C98B6384673EDF5B602FBE8E11FE1EBBFB97E1B4B8
+                          ADB7A87F63AA1F9EE9BAD1FE10B770792778A61B8ABD07CA7A13D7F2E0992EE0
+                          578DF075CC1685676AE1650DF0A7385416DEAB59BC52EE54D4D63DCA4DE78597
+                          D9A52675DF603398922493D274A29B926C48D355BCC35280FF2812FA1717C8E2
+                          B84EB319710000000049454E44AE426082}
+                        FileName = 
+                          'P:\Docs\Projetos\Agil\Framework\View\Assets\Image\32\user-32x32.' +
+                          'png'
+                      end>
+                    Align = Right
+                    Locked = True
+                    Margins.Top = 2.000000000000000000
+                    Margins.Bottom = 2.000000000000000000
+                    Position.X = 265.000000000000000000
+                    Position.Y = 2.000000000000000000
+                    Size.Width = 24.000000000000000000
+                    Size.Height = 26.000000000000000000
+                    Size.PlatformDefault = False
+                  end
+                end
+                object edtRegisterName: TEdit
+                  Touch.InteractiveGestures = [LongTap, DoubleTap]
+                  StyleLookup = 'transparentedit'
+                  TabOrder = 0
+                  TextSettings.FontColor = xFF2AB1AB
+                  Position.X = 48.000000000000000000
+                  Position.Y = 56.000000000000000000
+                  Size.Width = 289.000000000000000000
+                  Size.Height = 32.000000000000000000
+                  Size.PlatformDefault = False
+                  TextPrompt = 'Informe seu nome'
+                  StyledSettings = [Family, Size]
+                  object linRegisterName: TLine
+                    Align = Bottom
+                    LineType = Top
+                    Opacity = 0.500000000000000000
+                    Position.Y = 30.000000000000000000
+                    Size.Width = 289.000000000000000000
+                    Size.Height = 2.000000000000000000
+                    Size.PlatformDefault = False
+                    Stroke.Color = xFF2AB1AB
+                  end
+                  object lblRegisterName: TLabel
+                    Align = Top
+                    StyledSettings = [Family, Size]
+                    FocusControl = edtRegisterName
+                    Margins.Top = -24.000000000000000000
+                    Position.Y = -24.000000000000000000
+                    Size.Width = 289.000000000000000000
+                    Size.Height = 24.000000000000000000
+                    Size.PlatformDefault = False
+                    TextSettings.FontColor = xFF2AB1AB
+                    TextSettings.VertAlign = Trailing
+                    Text = 'Name'
+                    TabOrder = 1
+                    TabStop = False
+                  end
+                  object imgRegisterName: TImage
+                    MultiResBitmap.Height = 32
+                    MultiResBitmap.Width = 32
+                    MultiResBitmap = <
+                      item
+                        Width = 32
+                        Height = 32
+                        PNG = {
+                          89504E470D0A1A0A0000000D4948445200000020000000200806000000737A7A
+                          F40000000473424954080808087C086488000001C8494441545885BDD63F8F4C
+                          511CC6F1CF3513C952D09088644742A3D8928495ACD84E10745A85625F80A844
+                          A8C9C67BA0201A4BA1DB8D86ED448345B196C4560AABD89DD9AB9873933166E7
+                          FE3977E6499EE6DEF93DDFE7CE99B9E7505EE7F0086BD80E5EC3E3706F643A80
+                          05A4397E818375C30FE3530178E69530538B9A7853029EF96D988DD65C0578E6
+                          B93A0A7C8828F031167E34029EF9D830C0AE9C02C7AB772F969157604F0D0586
+                          660C2FD0B41E8D6F367FC68CEFC3A6EAEBBF85FD3105E07944818558389C40A7
+                          02BC8393751480BB150ADCAB0B0E091E9480CF8799DA75059F8780BFE06A99C0
+                          2A2D1B98C159B4C2B5552C06772A640E548269DCC76B3CC39102732D3C91244B
+                          61F68C0A0F7A0ACBFEFF8AFFE0A1EE3FA3D1F3F946B8368F8D0173CB21B3906E
+                          A13D2064509995E041D07EB771330F7EA74050AC6FEF04BFA47BC01C7581EDC0
+                          FA4713F8360678E6EFFA76C98B6384673EDF5B602FBE8E11FE1EBBFB97E1B4B8
+                          ADB7A87F63AA1F9EE9BAD1FE10B770792778A61B8ABD07CA7A13D7F2E0992EE0
+                          578DF075CC1685676AE1650DF0A7385416DEAB59BC52EE54D4D63DCA4DE78597
+                          D9A52675DF603398922493D274A29B926C48D355BCC35280FF2812FA1717C8E2
+                          B84EB319710000000049454E44AE426082}
+                        FileName = 
+                          'P:\Docs\Projetos\Agil\Framework\View\Assets\Image\32\user-32x32.' +
+                          'png'
+                      end>
+                    Align = Right
+                    Locked = True
+                    Margins.Top = 2.000000000000000000
+                    Margins.Bottom = 2.000000000000000000
+                    Position.X = 265.000000000000000000
+                    Position.Y = 2.000000000000000000
+                    Size.Width = 24.000000000000000000
+                    Size.Height = 26.000000000000000000
+                    Size.PlatformDefault = False
+                  end
+                end
+              end
+            end
+            object lytRegisterFooter: TLayout
+              Align = MostBottom
+              Position.Y = 421.999969482421900000
+              Size.Width = 391.842315673828100000
+              Size.Height = 60.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 1
+              TabStop = False
+            end
+            object lytRegisterButton: TLayout
+              Align = Bottom
+              Position.Y = 371.999969482421900000
+              Size.Width = 391.842315673828100000
+              Size.Height = 50.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 0
+              object recRegisterButton: TRoundRect
+                Align = Center
+                Fill.Color = xFF2AB1AB
+                Opacity = 0.800000011920929000
+                Size.Width = 217.000000000000000000
+                Size.Height = 46.000000000000000000
+                Size.PlatformDefault = False
+                Stroke.Kind = None
+                object lblRegisterButton: TLabel
+                  Align = Client
+                  StyledSettings = []
+                  Locked = True
+                  Size.Width = 217.000000000000000000
+                  Size.Height = 46.000000000000000000
+                  Size.PlatformDefault = False
+                  TextSettings.Font.Size = 16.000000000000000000
+                  TextSettings.Font.StyleExt = {00060000000000000004000000}
+                  TextSettings.FontColor = claWhite
+                  TextSettings.HorzAlign = Center
+                  Text = 'Registrar'
+                  TabOrder = 0
+                end
+              end
+            end
+          end
+        end
+        object tbiRemember: TTabItem
+          CustomIcon = <
+            item
+            end>
+          TextSettings.Trimming = None
+          IsSelected = False
+          Size.Width = 8.000000000000000000
+          Size.Height = 8.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = ''
+          TabOrder = 0
+          TabStop = False
+          Text = 'tbiRemember'
+          ExplicitSize.cx = 8.000000000000000000
+          ExplicitSize.cy = 8.000000000000000000
+          object lytRememberContent: TLayout
+            Align = Client
+            Size.Width = 391.842315673828100000
+            Size.Height = 481.999969482421900000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            object lytRememberHeader: TLayout
+              Align = MostTop
+              Size.Width = 391.842315673828100000
+              Size.Height = 120.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 3
+              TabStop = False
+              object lblRememberHeader: TLabel
+                Align = Center
+                StyledSettings = [Family, Style, FontColor]
+                Size.Width = 242.000000000000000000
+                Size.Height = 88.000000000000000000
+                Size.PlatformDefault = False
+                StyleLookup = 'LabelHeader'
+                TextSettings.Font.Size = 32.000000000000000000
+                TextSettings.HorzAlign = Center
+                Text = 'RESET'
+                TabOrder = 0
+                TabStop = False
+              end
+            end
+            object lytRememberBody: TLayout
+              Align = Client
+              Size.Width = 391.842315673828100000
+              Size.Height = 191.999969482421900000
+              Size.PlatformDefault = False
+              TabOrder = 2
+              object lytRememberFields: TLayout
+                Align = Client
+                Size.Width = 391.842315673828100000
+                Size.Height = 191.999969482421900000
+                Size.PlatformDefault = False
+                TabOrder = 0
+                object fillRememberFields: TFillRGBEffect
+                  Color = xFF2AB1AB
+                end
+                object edtRememberEmail: TEdit
+                  Touch.InteractiveGestures = [LongTap, DoubleTap]
+                  StyleLookup = 'transparentedit'
+                  TabOrder = 0
+                  KeyboardType = EmailAddress
+                  TextSettings.FontColor = xFF2AB1AB
+                  Position.X = 48.000000000000000000
+                  Position.Y = 80.000000000000000000
+                  Size.Width = 289.000000000000000000
+                  Size.Height = 32.000000000000000000
+                  Size.PlatformDefault = False
+                  TextPrompt = 'Entre com seu e-mail'
+                  StyledSettings = [Family, Size]
+                  object linRememberEmail: TLine
+                    Align = Bottom
+                    LineType = Top
+                    Opacity = 0.500000000000000000
+                    Position.Y = 30.000000000000000000
+                    Size.Width = 289.000000000000000000
+                    Size.Height = 2.000000000000000000
+                    Size.PlatformDefault = False
+                    Stroke.Color = xFF2AB1AB
+                  end
+                  object lblRememberEmail: TLabel
+                    Align = Top
+                    StyledSettings = [Family, Size]
+                    FocusControl = edtRememberEmail
+                    Margins.Top = -24.000000000000000000
+                    Position.Y = -24.000000000000000000
+                    Size.Width = 289.000000000000000000
+                    Size.Height = 24.000000000000000000
+                    Size.PlatformDefault = False
+                    TextSettings.FontColor = xFF2AB1AB
+                    TextSettings.VertAlign = Trailing
+                    Text = 'E-mail'
+                    TabOrder = 1
+                    TabStop = False
+                  end
+                  object imgRememberEmail: TImage
+                    MultiResBitmap.Height = 32
+                    MultiResBitmap.Width = 32
+                    MultiResBitmap = <
+                      item
+                        Width = 32
+                        Height = 32
+                        PNG = {
+                          89504E470D0A1A0A0000000D4948445200000020000000200806000000737A7A
+                          F40000000473424954080808087C086488000001C8494441545885BDD63F8F4C
+                          511CC6F1CF3513C952D09088644742A3D8928495ACD84E10745A85625F80A844
+                          A8C9C67BA0201A4BA1DB8D86ED448345B196C4560AABD89DD9AB9873933166E7
+                          FE3977E6499EE6DEF93DDFE7CE99B9E7505EE7F0086BD80E5EC3E3706F643A80
+                          05A4397E818375C30FE3530178E69530538B9A7853029EF96D988DD65C0578E6
+                          B93A0A7C8828F031167E34029EF9D830C0AE9C02C7AB772F969157604F0D0586
+                          660C2FD0B41E8D6F367FC68CEFC3A6EAEBBF85FD3105E07944818558389C40A7
+                          02BC8393751480BB150ADCAB0B0E091E9480CF8799DA75059F8780BFE06A99C0
+                          2A2D1B98C159B4C2B5552C06772A640E548269DCC76B3CC39102732D3C91244B
+                          61F68C0A0F7A0ACBFEFF8AFFE0A1EE3FA3D1F3F946B8368F8D0173CB21B3906E
+                          A13D2064509995E041D07EB771330F7EA74050AC6FEF04BFA47BC01C7581EDC0
+                          FA4713F8360678E6EFFA76C98B6384673EDF5B602FBE8E11FE1EBBFB97E1B4B8
+                          ADB7A87F63AA1F9EE9BAD1FE10B770792778A61B8ABD07CA7A13D7F2E0992EE0
+                          578DF075CC1685676AE1650DF0A7385416DEAB59BC52EE54D4D63DCA4DE78597
+                          D9A52675DF603398922493D274A29B926C48D355BCC35280FF2812FA1717C8E2
+                          B84EB319710000000049454E44AE426082}
+                        FileName = 
+                          'P:\Docs\Projetos\Agil\Framework\View\Assets\Image\32\user-32x32.' +
+                          'png'
+                      end>
+                    Align = Right
+                    Locked = True
+                    Margins.Top = 2.000000000000000000
+                    Margins.Bottom = 2.000000000000000000
+                    Position.X = 265.000000000000000000
+                    Position.Y = 2.000000000000000000
+                    Size.Width = 24.000000000000000000
+                    Size.Height = 26.000000000000000000
+                    Size.PlatformDefault = False
+                  end
+                end
+              end
+            end
+            object lytRememberFooter: TLayout
+              Align = MostBottom
+              Position.Y = 361.999969482421900000
+              Size.Width = 391.842315673828100000
+              Size.Height = 120.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 1
+              TabStop = False
+              object lytEfetuarLogin: TLayout
+                Align = Top
+                Size.Width = 391.842315673828100000
+                Size.Height = 50.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 0
+                object lblEfetuarLogin: TLabel
+                  Align = Center
+                  Cursor = crHandPoint
+                  StyledSettings = []
+                  HitTest = True
+                  Opacity = 0.800000011920929000
+                  Size.Width = 96.000000000000000000
+                  Size.Height = 40.000000000000000000
+                  Size.PlatformDefault = False
+                  TextSettings.Font.StyleExt = {00060000000000000004000000}
+                  TextSettings.FontColor = xFF2AB1AB
+                  TextSettings.HorzAlign = Center
+                  Text = 'Efetuar Login'
+                  TabOrder = 0
+                  OnClick = lblEfetuarLoginClick
+                end
+              end
+            end
+            object lytResetButton: TLayout
+              Align = Bottom
+              Position.Y = 311.999969482421900000
+              Size.Width = 391.842315673828100000
+              Size.Height = 50.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 0
+              object recResetButton: TRoundRect
+                Align = Center
+                Fill.Color = xFF2AB1AB
+                Opacity = 0.800000011920929000
+                Size.Width = 217.000000000000000000
+                Size.Height = 46.000000000000000000
+                Size.PlatformDefault = False
+                Stroke.Kind = None
+                OnClick = recLoginButtonClick
+                object lblResetButton: TLabel
+                  Align = Client
+                  StyledSettings = []
+                  Locked = True
+                  Size.Width = 217.000000000000000000
+                  Size.Height = 46.000000000000000000
+                  Size.PlatformDefault = False
+                  TextSettings.Font.Size = 16.000000000000000000
+                  TextSettings.Font.StyleExt = {00060000000000000004000000}
+                  TextSettings.FontColor = claWhite
+                  TextSettings.HorzAlign = Center
+                  Text = 'Resetar senha!'
+                  TabOrder = 0
+                end
+              end
+            end
+          end
+        end
+      end
+    end
+  end
+end

@@ -1,0 +1,12 @@
+{
+	"name": "Agil.Framework",
+	"description": "Framework padrão para views em Firemonkey",
+	"version": "1.0.0",
+	"homepage": "https://github.com/",
+	"mainsrc": "./",
+	"projects": [],
+	"dependencies": {
+		"https://github.com/academiadocodigo/router4delphi": "^1.0.7",
+		"https://github.com/academiadocodigo/simpleorm": "^2.02.09"
+	}
+}

@@ -1,0 +1,22 @@
+{
+	"hash": "d41d8cd98f00b204e9800998ecf8427e",
+	"updated": "2022-07-12T11:09:37.6052306-03:00",
+	"installedModules": {
+		"https://github.com/academiadocodigo/router4delphi": {
+			"name": "router4delphi",
+			"version": "1.0.9",
+			"hash": "bddc4aad5b70f1afd094c30777b739ea",
+			"artifacts": {},
+			"failed": false,
+			"changed": false
+		},
+		"https://github.com/academiadocodigo/simpleorm": {
+			"name": "simpleorm",
+			"version": "2.02.11",
+			"hash": "d2dfe4051838c959ec8fa3fdd329608c",
+			"artifacts": {},
+			"failed": false,
+			"changed": false
+		}
+	}
+}
