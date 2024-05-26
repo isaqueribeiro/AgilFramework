@@ -43,15 +43,15 @@ end;
 
 destructor TControllerLogin.Destroy;
 begin
-  FDataSource.DisposeOf;
-  FEntity.DisposeOf;
+  FDataSource.Free;
+  FEntity.Free;
   inherited;
 end;
 
 function TControllerLogin.Execute: IControllerLogin;
 begin
   Result := Self;
-  FModel.DAO.Find('usr.cd_usuario', FEntity.UserName);
+  FModel.DAO.Find('cd_usuario', FEntity.UserName);
 
   if FModel.Entity.UserName.IsEmpty then
     raise HandleErrorException.Create('Atenção', 'Usuário e senha inválidos!', TTypeException.teWarning);

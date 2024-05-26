@@ -48,7 +48,7 @@ end;
 
 destructor TModelDAOUsuario.Destroy;
 begin
-  FEntity.DisposeOf;
+  FEntity.Free;
   inherited;
 end;
 

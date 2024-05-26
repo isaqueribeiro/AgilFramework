@@ -8,6 +8,7 @@ uses
   System.UITypes,
   System.Generics.Collections,
 
+  FMX.Ani,
   FMX.Types,
   FMX.Controls,
   FMX.Objects,
@@ -74,7 +75,7 @@ end;
 
 destructor TViewAssetControl.Destroy;
 begin
-  FListOnClick.DisposeOf;
+  FListOnClick.Free;
   inherited;
 end;
 

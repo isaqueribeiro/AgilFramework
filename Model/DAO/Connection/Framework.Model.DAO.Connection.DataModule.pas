@@ -27,38 +27,11 @@ uses
   FireDAC.Stan.ExprFuncs,
   FireDAC.Phys.SQLiteWrapper.Stat,
   FireDAC.Phys.SQLiteDef,
-  FireDAC.Phys.SQLite;
+  FireDAC.Phys.SQLite,
+
+  Framework.Model.DAO.Connection.Params;
 
 type
-  TDataModuleParams<T> = class
-    strict private
-      FParent : T;
-      FDriveID,
-      FHost   : String;
-      FPort   : Integer;
-      FDataBase ,
-      FUserName ,
-      FPassword : String;
-    protected
-      constructor Create(aParent : T);
-    public
-      destructor Destroy; override;
-      function &End : T;
-
-      function DriveName(Value : String) : TDataModuleParams<T>; overload;
-      function DriveName : String; overload;
-//      function Host(Value : String) : TDataModuleParams<T>; overload;
-//      function Host : String; overload;
-//      function Port(Value : Integer) : TDataModuleParams<T>; overload;
-//      function Port : Integer; overload;
-      function DataBase(Value : String) : TDataModuleParams<T>; overload;
-      function DataBase : String; overload;
-//      function UserName(Value : String) : TDataModuleParams<T>; overload;
-//      function UserName : String; overload;
-//      function Password(Value : String) : TDataModuleParams<T>; overload;
-//      function Password : String; overload;
-  end;
-
   TDataModuleConexao = class(TDataModule)
     Conn: TFDConnection;
     Trans: TFDTransaction;
@@ -84,51 +57,6 @@ uses
 
 {$R *.dfm}
 
-{ TDataModuleParams<T> }
-
-function TDataModuleParams<T>.&End: T;
-begin
-  Result := FParent;
-end;
-
-constructor TDataModuleParams<T>.Create(aParent: T);
-begin
-  FParent   := aParent;
-  FDriveID  := 'SQLite';
-  FHost     := 'localhost';
-  FPort     := 0;
-  FDataBase := '.\db\banco.db';
-  FUserName := EmptyStr;
-  FPassword := EmptyStr;
-end;
-
-function TDataModuleParams<T>.DataBase: String;
-begin
-  Result := FDataBase;
-end;
-
-function TDataModuleParams<T>.DataBase(Value: String): TDataModuleParams<T>;
-begin
-  Result := Self;
-  FDataBase := Value.Trim;
-end;
-
-destructor TDataModuleParams<T>.Destroy;
-begin
-  inherited;
-end;
-
-function TDataModuleParams<T>.DriveName: String;
-begin
-  Result := FDriveID;
-end;
-
-function TDataModuleParams<T>.DriveName(Value: String): TDataModuleParams<T>;
-begin
-  Result := Self;
-  FDriveID := Value.Trim;
-end;
-
 { TdmConexao }
 
 procedure TDataModuleConexao.ConnBeforeConnect(Sender: TObject);
@@ -137,16 +65,19 @@ begin
   begin
     Conn.Params.BeginUpdate;
     try
+      Params.Load;
+
       Conn.Params.Clear;
       Conn.Params.AddPair('DriverID', Params.DriveName);
-      Conn.Params.AddPair('Database', '.\db\banco.db');
-      Conn.Params.AddPair('LockingMode', 'Normal');
+      Conn.Params.AddPair('Database', Params.DataBase);
     finally
       Conn.Params.EndUpdate;
     end;
 
     if (Conn.DriverName = 'SQLite') then
     begin
+      Conn.Params.AddPair('OpenMode', Params.OpenMode);
+      Conn.Params.AddPair('LockingMode', Params.LockingMode);
       if not TDirectory.Exists(TPath.Combine(ExtractFilePath(ParamStr(0)), 'db')) then
         TDirectory.CreateDirectory(TPath.Combine(ExtractFilePath(ParamStr(0)), 'db'));
     end;
@@ -163,7 +94,7 @@ end;
 
 procedure TDataModuleConexao.DataModuleDestroy(Sender: TObject);
 begin
-  FParams.DisposeOf;
+  FParams.Free;
 end;
 
 function TDataModuleConexao.Params: TDataModuleParams<TDataModuleConexao>;

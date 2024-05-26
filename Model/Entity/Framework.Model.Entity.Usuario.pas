@@ -4,20 +4,25 @@ interface
 
 uses
   System.SysUtils,
+  System.StrUtils,
   System.Variants,
+
   SimpleAttributes;
 
 type
-  [Tabela('SYS_USUARIO usr')]
+  [Tabela('SYS_USUARIO')]
   TUsuario = class
   private
-    FLastName: String;
-    FPassword: String;
-    FFirstName: String;
-    FUserName: String;
-    FTokenId: String;
-    FCreatedAt: TDateTime;
-    FUpdateAt: TDateTime;
+    FId ,
+    FLastName ,
+    FPassword ,
+    FFirstName,
+    FUserName ,
+    FTokenId  : String;
+    FCreatedAt,
+    FUpdateAt : TDateTime;
+    FActive   : Word;
+    procedure SetId(const Value: String);
     procedure SetFirstName(const Value: String);
     procedure SetLastName(const Value: String);
     procedure SetPassword(const Value: String);
@@ -25,25 +30,30 @@ type
     procedure SetTokenId(const Value: String);
     procedure SetCreatedAt(const Value: TDateTime);
     procedure SetUpdateAt(const Value: TDateTime);
+    procedure SetActive(const Value: Word);
   public
     constructor Create;
     destructor Destroy; override;
 
     procedure Limpar;
   published
-    [Campo('usr.cd_usuario'), Pk, NotNull, Display('E-mail')]
+    [Campo('id_usuario'), Pk, NotNull, Display('Id')]
+    property Id : String read FId write SetId;
+    [Campo('cd_usuario'), NotNull, Display('E-mail')]
     property UserName : String read FUserName write SetUserName;
-    [Campo('usr.ds_senha'), NotNull, Display('Senha')]
+    [Campo('ds_senha'), NotNull, Display('Senha')]
     property Password : String read FPassword write SetPassword;
-    [Campo('usr.ds_primeironome'), Display('Nome')]
+    [Campo('ds_primeironome'), Display('Nome')]
     property FirstName : String read FFirstName write SetFirstName;
-    [Campo('usr.ds_ultimonome'), Display('Sobrenome')]
+    [Campo('ds_ultimonome'), Display('Sobrenome')]
     property LastName : String read FLastName write SetLastName;
-    [Campo('usr.id_token')]
+    [Campo('id_token')]
     property TokenId : String read FTokenId write SetTokenId;
-    [Campo('usr.created_at'), Format('dd/mm/yyyy'), Display('Criado em')]
+    [Campo('sn_ativo'), NotNull, Display('Ativo')]
+    property Active : Word read FActive write SetActive;
+    [Campo('created_at'), Format('dd/mm/yyyy'), Display('Criado em')]
     property CreatedAt : TDateTime read FCreatedAt write SetCreatedAt;
-    [Campo('usr.upated_at'), Format('dd/mm/yyyy'), Display('Atualizado em')]
+    [Campo('upated_at'), Format('dd/mm/yyyy'), Display('Atualizado em')]
     property UpdateAt : TDateTime read FUpdateAt write SetUpdateAt;
 
     [Ignore, Display('Usuário')]
@@ -66,6 +76,7 @@ end;
 
 procedure TUsuario.Limpar;
 begin
+  FId := EmptyStr;
   FUserName  := EmptyStr;
   FPassword  := EmptyStr;
   FFirstName := EmptyStr;
@@ -85,6 +96,11 @@ begin
   Result := Trim(aFirstName + ' ' + aLastName);
 end;
 
+procedure TUsuario.SetActive(const Value: Word);
+begin
+  FActive := IfThen(Value = 1, '1', '0').ToInteger;
+end;
+
 procedure TUsuario.SetCreatedAt(const Value: TDateTime);
 begin
   FCreatedAt := Value;
@@ -93,6 +109,11 @@ end;
 procedure TUsuario.SetFirstName(const Value: String);
 begin
   FFirstName := Value.Trim;
+end;
+
+procedure TUsuario.SetId(const Value: String);
+begin
+  FId := Value.Trim.ToUpper;
 end;
 
 procedure TUsuario.SetLastName(const Value: String);

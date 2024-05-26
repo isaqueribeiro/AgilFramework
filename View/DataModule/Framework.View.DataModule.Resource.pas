@@ -87,7 +87,7 @@ begin
     try
       ServiceMessage.Error(Application.MainForm, aError.Title, aError.Informative);
     finally
-      aError.DisposeOf;
+      aError.Free;
     end;
   end;
 end;

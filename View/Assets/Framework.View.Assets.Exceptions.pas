@@ -71,7 +71,7 @@ begin
       end;
     end;
   finally
-    aLog.DisposeOf;
+    aLog.Free;
   end;
 end;
 

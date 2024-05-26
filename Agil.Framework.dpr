@@ -4,6 +4,7 @@ uses
   System.StartUpCopy,
   FMX.Forms,
   FMX.Skia,
+  Framework.Service.Message in 'Service\Framework.Service.Message.pas',
   Framework.View.Index in 'View\Framework.View.Index.pas' {ViewIndex},
   Framework.View.Login in 'View\Framework.View.Login.pas' {ViewLogin},
   Framework.View.DataModule.Resource in 'View\DataModule\Framework.View.DataModule.Resource.pas' {DataModuleResource: TDataModule},
@@ -17,14 +18,14 @@ uses
   Framework.Model.DAO.Usuario in 'Model\DAO\Framework.Model.DAO.Usuario.pas',
   Framework.Model.DAO.Interfaces in 'Model\DAO\Framework.Model.DAO.Interfaces.pas',
   Framework.Model.Entity in 'Model\Entity\Framework.Model.Entity.pas',
+  Framework.Model.DAO.Connection.Params in 'Model\DAO\Connection\Framework.Model.DAO.Connection.Params.pas',
   Framework.Model.DAO.Connection.DataModule in 'Model\DAO\Connection\Framework.Model.DAO.Connection.DataModule.pas' {DataModuleConexao: TDataModule},
   Framework.Model.DAO.Connection.Interfaces in 'Model\DAO\Connection\Framework.Model.DAO.Connection.Interfaces.pas',
   Framework.Controller in 'Controller\Framework.Controller.pas',
   Framework.Controller.Login in 'Controller\Framework.Controller.Login.pas',
   Framework.Controller.Interfaces in 'Controller\Framework.Controller.Interfaces.pas',
   Framework.View.Assets.Interceptor.Edit in 'View\Assets\Interceptor\Framework.View.Assets.Interceptor.Edit.pas',
-  Framework.View.Message in 'View\Framework.View.Message.pas' {ViewMessage},
-  Framework.Service.Message in 'Service\Framework.Service.Message.pas';
+  Framework.View.Message in 'View\Framework.View.Message.pas' {ViewMessage};
 
 {$R *.res}
 

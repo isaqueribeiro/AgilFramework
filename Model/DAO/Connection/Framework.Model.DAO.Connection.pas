@@ -37,7 +37,7 @@ end;
 destructor TModelDAOConnection.Destroy;
 begin
   FDataModule.Conn.Connected := False;
-  FDataModule.DisposeOf;
+  FDataModule.Free;
   inherited;
 end;
 

@@ -2,7 +2,6 @@ object DataModuleResource: TDataModuleResource
   OnCreate = DataModuleCreate
   Height = 235
   Width = 375
-  PixelsPerInch = 96
   object StyleBookDefault: TStyleBook
     Styles = <
       item

@@ -3,7 +3,6 @@ object DataModuleConexao: TDataModuleConexao
   OnDestroy = DataModuleDestroy
   Height = 301
   Width = 413
-  PixelsPerInch = 96
   object Conn: TFDConnection
     Params.Strings = (
       'DriverID=SQLite')

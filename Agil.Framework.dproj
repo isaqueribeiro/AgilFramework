@@ -283,6 +283,7 @@
         <DelphiCompile Include="$(MainSource)">
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
+        <DCCReference Include="Service\Framework.Service.Message.pas"/>
         <DCCReference Include="View\Framework.View.Index.pas">
             <Form>ViewIndex</Form>
         </DCCReference>
@@ -303,6 +304,7 @@
         <DCCReference Include="Model\DAO\Framework.Model.DAO.Usuario.pas"/>
         <DCCReference Include="Model\DAO\Framework.Model.DAO.Interfaces.pas"/>
         <DCCReference Include="Model\Entity\Framework.Model.Entity.pas"/>
+        <DCCReference Include="Model\DAO\Connection\Framework.Model.DAO.Connection.Params.pas"/>
         <DCCReference Include="Model\DAO\Connection\Framework.Model.DAO.Connection.DataModule.pas">
             <Form>DataModuleConexao</Form>
             <DesignClass>TDataModule</DesignClass>
@@ -315,7 +317,6 @@
         <DCCReference Include="View\Framework.View.Message.pas">
             <Form>ViewMessage</Form>
         </DCCReference>
-        <DCCReference Include="Service\Framework.Service.Message.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
@@ -582,6 +583,12 @@
                     </Platform>
                 </DeployFile>
                 <DeployFile LocalName="..\.bin\Win32\Debug\Agil.Framework.exe" Configuration="Debug" Class="ProjectOutput"/>
+                <DeployFile LocalName="..\.bin\Win32\Debug\Agil.Framework.exe" Configuration="Debug" Class="ProjectOutput">
+                    <Platform Name="Win32">
+                        <RemoteName>Agil.Framework.exe</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
                 <DeployClass Name="AdditionalDebugSymbols">
                     <Platform Name="iOSSimulator">
                         <Operation>1</Operation>

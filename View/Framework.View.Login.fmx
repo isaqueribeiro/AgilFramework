@@ -100,12 +100,13 @@ object ViewLogin: TViewLogin
               TabStop = False
               object lblLoginHeader: TLabel
                 Align = Center
-                StyledSettings = [Family, Style, FontColor]
+                StyledSettings = [Family, Style]
                 Size.Width = 163.000000000000000000
                 Size.Height = 37.000000000000000000
                 Size.PlatformDefault = False
                 StyleLookup = 'LabelHeader'
                 TextSettings.Font.Size = 32.000000000000000000
+                TextSettings.FontColor = xFF2AB1AB
                 TextSettings.HorzAlign = Center
                 Text = 'LOGIN'
                 TabOrder = 0
@@ -313,9 +314,9 @@ object ViewLogin: TViewLogin
                   StyledSettings = []
                   HitTest = True
                   Opacity = 0.800000011920929000
-                  Position.X = 204.000015258789100000
+                  Position.X = 204.000000000000000000
                   Position.Y = 6.000000000000000000
-                  Size.Width = 177.599960327148400000
+                  Size.Width = 177.599975585937500000
                   Size.Height = 40.000000000000000000
                   Size.PlatformDefault = False
                   TextSettings.Font.StyleExt = {00060000000000000004000000}
@@ -349,7 +350,7 @@ object ViewLogin: TViewLogin
                 Align = Center
                 Fill.Color = xFF2AB1AB
                 Opacity = 0.800000011920929000
-                Size.Width = 217.000000000000000000
+                Size.Width = 180.000000000000000000
                 Size.Height = 46.000000000000000000
                 Size.PlatformDefault = False
                 Stroke.Kind = None
@@ -358,7 +359,7 @@ object ViewLogin: TViewLogin
                   Align = Client
                   StyledSettings = []
                   Locked = True
-                  Size.Width = 217.000000000000000000
+                  Size.Width = 180.000000000000000000
                   Size.Height = 46.000000000000000000
                   Size.PlatformDefault = False
                   TextSettings.Font.Size = 16.000000000000000000
@@ -402,12 +403,13 @@ object ViewLogin: TViewLogin
               TabStop = False
               object lblRegisterHeader: TLabel
                 Align = Center
-                StyledSettings = [Family, Style, FontColor]
+                StyledSettings = [Family, Style]
                 Size.Width = 163.000000000000000000
                 Size.Height = 37.000000000000000000
                 Size.PlatformDefault = False
                 StyleLookup = 'LabelHeader'
                 TextSettings.Font.Size = 32.000000000000000000
+                TextSettings.FontColor = xFF2AB1AB
                 TextSettings.HorzAlign = Center
                 Text = 'REGISTER'
                 TabOrder = 0
@@ -674,7 +676,7 @@ object ViewLogin: TViewLogin
                 Align = Center
                 Fill.Color = xFF2AB1AB
                 Opacity = 0.800000011920929000
-                Size.Width = 217.000000000000000000
+                Size.Width = 180.000000000000000000
                 Size.Height = 46.000000000000000000
                 Size.PlatformDefault = False
                 Stroke.Kind = None
@@ -682,7 +684,7 @@ object ViewLogin: TViewLogin
                   Align = Client
                   StyledSettings = []
                   Locked = True
-                  Size.Width = 217.000000000000000000
+                  Size.Width = 180.000000000000000000
                   Size.Height = 46.000000000000000000
                   Size.PlatformDefault = False
                   TextSettings.Font.Size = 16.000000000000000000
@@ -726,12 +728,13 @@ object ViewLogin: TViewLogin
               TabStop = False
               object lblRememberHeader: TLabel
                 Align = Center
-                StyledSettings = [Family, Style, FontColor]
+                StyledSettings = [Family, Style]
                 Size.Width = 242.000000000000000000
                 Size.Height = 88.000000000000000000
                 Size.PlatformDefault = False
                 StyleLookup = 'LabelHeader'
                 TextSettings.Font.Size = 32.000000000000000000
+                TextSettings.FontColor = xFF2AB1AB
                 TextSettings.HorzAlign = Center
                 Text = 'RESET'
                 TabOrder = 0
@@ -876,7 +879,7 @@ object ViewLogin: TViewLogin
                 Align = Center
                 Fill.Color = xFF2AB1AB
                 Opacity = 0.800000011920929000
-                Size.Width = 217.000000000000000000
+                Size.Width = 180.000000000000000000
                 Size.Height = 46.000000000000000000
                 Size.PlatformDefault = False
                 Stroke.Kind = None
@@ -885,7 +888,7 @@ object ViewLogin: TViewLogin
                   Align = Client
                   StyledSettings = []
                   Locked = True
-                  Size.Width = 217.000000000000000000
+                  Size.Width = 180.000000000000000000
                   Size.Height = 46.000000000000000000
                   Size.PlatformDefault = False
                   TextSettings.Font.Size = 16.000000000000000000
