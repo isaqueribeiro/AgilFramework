@@ -27,7 +27,8 @@ type
 
   TViewAssetControl = class(TInterfacedObject, IViewAssetControl)
     strict private
-      const OPACITY_DEFAULT = 0.8;
+      const OPACITY_DEFAULT = 1;
+      const OPACITY_INVERT  = 0.8;
     private
       procedure OnMouseEnterRoundRect(Sender: TObject);
       procedure OnMouseLeaveRoundRect(Sender: TObject);
@@ -83,7 +84,7 @@ procedure TViewAssetControl.LabelMouseEnter(Sender: TObject);
 begin
   if Sender is TLabel then
   begin
-    TLabel(Sender).Opacity := 1;
+    TLabel(Sender).Opacity := OPACITY_INVERT;
     TLabel(Sender).TextSettings.Font.Size := TLabel(Sender).TextSettings.Font.Size + 1;
   end;
 end;
@@ -92,7 +93,7 @@ procedure TViewAssetControl.LabelMouseLeave(Sender: TObject);
 begin
   if Sender is TLabel then
   begin
-    TLabel(Sender).Opacity := 0.8;
+    TLabel(Sender).Opacity := OPACITY_DEFAULT;
     TLabel(Sender).TextSettings.Font.Size := TLabel(Sender).TextSettings.Font.Size - 1;
   end;
 end;
@@ -129,7 +130,7 @@ end;
 
 procedure TViewAssetControl.OnMouseEnterRoundRect(Sender: TObject);
 begin
-  TRoundRect(Sender).Opacity := 1;
+  TRoundRect(Sender).Opacity := OPACITY_INVERT;
 end;
 
 procedure TViewAssetControl.OnMouseLeaveRoundRect(Sender: TObject);

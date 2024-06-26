@@ -58,7 +58,7 @@ object ViewLogin: TViewLogin
         Size.Height = 481.999969482421900000
         Size.PlatformDefault = False
         StyleLookup = 'TabControlTransparent'
-        TabIndex = 1
+        TabIndex = 0
         TabOrder = 0
         TabStop = False
         TabPosition = None
@@ -75,7 +75,7 @@ object ViewLogin: TViewLogin
             item
             end>
           TextSettings.Trimming = None
-          IsSelected = False
+          IsSelected = True
           Size.Width = 8.000000000000000000
           Size.Height = 8.000000000000000000
           Size.PlatformDefault = False
@@ -295,7 +295,6 @@ object ViewLogin: TViewLogin
                   Cursor = crHandPoint
                   StyledSettings = []
                   HitTest = True
-                  Opacity = 0.800000011920929000
                   Position.X = 12.000000953674320000
                   Position.Y = 6.000000000000000000
                   Size.Width = 177.599975585937500000
@@ -313,16 +312,15 @@ object ViewLogin: TViewLogin
                   Cursor = crHandPoint
                   StyledSettings = []
                   HitTest = True
-                  Opacity = 0.800000011920929000
-                  Position.X = 203.999984741210900000
+                  Position.X = 203.999969482421900000
                   Position.Y = 6.000000000000000000
-                  Size.Width = 177.599990844726600000
+                  Size.Width = 177.600006103515600000
                   Size.Height = 40.000000000000000000
                   Size.PlatformDefault = False
                   TextSettings.Font.StyleExt = {00060000000000000004000000}
                   TextSettings.FontColor = xFF21A09A
                   TextSettings.HorzAlign = Center
-                  Text = 'Registrar aceso'
+                  Text = 'Registrar acesso'
                   TabOrder = 0
                   OnClick = lblRegistrarAcessoClick
                 end
@@ -349,7 +347,6 @@ object ViewLogin: TViewLogin
               object recLoginButton: TRoundRect
                 Align = Center
                 Fill.Color = xFF2AB1AB
-                Opacity = 0.800000011920929000
                 Size.Width = 180.000000000000000000
                 Size.Height = 46.000000000000000000
                 Size.PlatformDefault = False
@@ -378,7 +375,7 @@ object ViewLogin: TViewLogin
             item
             end>
           TextSettings.Trimming = None
-          IsSelected = True
+          IsSelected = False
           Size.Width = 8.000000000000000000
           Size.Height = 8.000000000000000000
           Size.PlatformDefault = False
@@ -675,7 +672,6 @@ object ViewLogin: TViewLogin
               object recRegisterButton: TRoundRect
                 Align = Center
                 Fill.Color = xFF2AB1AB
-                Opacity = 0.800000011920929000
                 Size.Width = 180.000000000000000000
                 Size.Height = 46.000000000000000000
                 Size.PlatformDefault = False
@@ -855,7 +851,6 @@ object ViewLogin: TViewLogin
                   Cursor = crHandPoint
                   StyledSettings = []
                   HitTest = True
-                  Opacity = 0.800000011920929000
                   Size.Width = 96.000000000000000000
                   Size.Height = 40.000000000000000000
                   Size.PlatformDefault = False
@@ -878,7 +873,6 @@ object ViewLogin: TViewLogin
               object recResetButton: TRoundRect
                 Align = Center
                 Fill.Color = xFF2AB1AB
-                Opacity = 0.800000011920929000
                 Size.Width = 180.000000000000000000
                 Size.Height = 46.000000000000000000
                 Size.PlatformDefault = False
